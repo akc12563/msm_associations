@@ -12,7 +12,7 @@ validates :title, :presence => true, :uniqueness => {:scope=>:year}
 validates :year, :numericality => {:only_integer => true, :greater_than_or_equal_to =>1870, :less_than_or_equal_to =>2050}
 #  - duration: must be integer between 0 and 2764800
 # if the below is added then can't add new director, without it fail validation test
-#validates :duration, :numericality => {:only_integer => true, :greater_than_or_equal_to =>0, :less_than_or_equal_to =>2764800}
+validates :duration, :numericality => {:only_integer => true, :greater_than_or_equal_to =>0, :less_than_or_equal_to =>2764800}
 #  - description: no rules
 #  - image_url: no rules
 
